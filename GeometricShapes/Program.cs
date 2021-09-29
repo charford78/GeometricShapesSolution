@@ -6,32 +6,30 @@ namespace GeometricShapes
     {
         static void Main(string[] args)
         {
-            var s1 = new Square()
-            {
-                side1 = 4
-            };
-            Console.WriteLine($"Perimeter is {s1.perimeter()}");
-            Console.WriteLine($"Area is {s1.area()}");
+            var s1 = new Square(4);
+            s1.Print();
+
+            var s2 = new Square(5);
+            s2.Print();
 
             var r1 = new Rect()
             {
-                side1 = 3, side2 = 5
+                side1 = 3, side2 = 5, side3 = 3, side4 = 5
             };
-            Console.WriteLine($"Perimeter is {r1.perimeter()}");
-            Console.WriteLine($"Area is {r1.area()}");
+            r1.Print();
 
-            var q1 = new Quad()
-            {
-                side1 = 3, side2 = 4, side3 = 5, side4 = 6
-            };
-            Console.WriteLine($"Perimeter is {q1.perimeter()}");
+            var r2 = new Rect(3, 7);
+            r2.Print();
+
+            var q1 = new Quad(3, 4, 5, 6);
+            q1.Print();
 
             var t1 = new Triang()
             {
                 Base = 5, side1 = 8, side2 = 9, height = 7
             };
-            Console.WriteLine($"Perimeter is {t1.perimeter()}");
-            Console.WriteLine($"Area is {t1.area()}");
+            Console.WriteLine($"Triangle1 perimeter is {t1.perimeter()}.");
+            Console.WriteLine($"Triangle1 area is {t1.area()}.");
         }
     }
 }
